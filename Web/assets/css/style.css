@@ -1,0 +1,68 @@
+:root{
+    --first-color: #d76060;
+    --second-color: #DF4E4E;
+    --white-color: #fff;
+    --poppins: 'Poppins', sans-serif;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+}
+.container{
+    height: 100%;
+    width: 100%;
+    background: url('../img/background.svg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .form{
+    position: relative;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 1);
+    border-radius: 0.25rem;
+}
+.container .form form .button{
+    padding: 0.5rem 1rem;
+    background-color: var(--first-color);
+    border: none;
+    outline: none;
+    color: var(--white-color);
+    font-family: var(--poppins);
+    font-size: 1.25rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: all .2s ease-in;
+}
+.container .form form .button:hover{
+    background-color: var(--second-color);
+    box-shadow: 1px 1px 5px var(--second-color);
+}
+.container .form form .button:hover ~ .popup{
+    opacity: 1;
+}
+.container .form form .popup{
+    position: absolute;
+    top: -37vh;
+    width: 240px;
+    height: auto;
+    right: 0;
+    left: 0;
+    background-color: var(--white-color);
+    padding: 0.75rem 1.75rem;
+    font-family: var(--poppins);
+    font-size: 0.85rem;
+    cursor: default;
+    border-radius: 0.25rem;
+    opacity: 0;
+    transition: opacity .4s ease-in-out;
+}
+.container .form form .popup img{
+    width: 100%;
+    height: auto;
+}
