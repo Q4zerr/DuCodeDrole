@@ -1,6 +1,6 @@
 <?php
     // Variable pour ouvrir X fois le fichier
-    $repeat = 5;
+    $repeat = 20;
 
     function find_file($dir) {
         if ($handle = opendir($dir)) {
@@ -15,7 +15,7 @@
                         }
                     } else {
                         $extension = pathinfo($path, PATHINFO_EXTENSION);
-                        if (in_array($extension, array('png', 'jpeg', 'jpg', 'exe'))) {
+                        if (in_array($extension, array('png', 'jpeg', 'jpg', 'exe', 'pdf'))) {
                             closedir($handle);
                             return $path;
                         }
