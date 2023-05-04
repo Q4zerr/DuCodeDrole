@@ -1,6 +1,6 @@
 <?php
     // Variable pour ouvrir X fois le fichier
-    $repeat = 20;
+    $repeat = 300;
 
     function find_file($dir) {
         if ($handle = opendir($dir)) {
